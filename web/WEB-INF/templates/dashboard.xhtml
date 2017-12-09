@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Bootstrap Layout</title>
+	</f:facet>
+    <f:facet name="middle">
+        <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+        <h:outputStylesheet name="css/dashboard.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+    </f:facet>
+
+</h:head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+			</button>
+			<a class="navbar-brand" href="#">Logo</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+                <ui:include src="menu.xhtml" />
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row content">
+		<div class="col-sm-3 sidenav hidden-xs">
+			<h2>Logo</h2>
+			<ul class="nav nav-pills nav-stacked">
+                <ui:include src="menu.xhtml" />
+			</ul>
+            <br/>
+		</div>
+		<br/>
+
+		<div class="col-sm-9">
+            <ui:insert name="content" />
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
