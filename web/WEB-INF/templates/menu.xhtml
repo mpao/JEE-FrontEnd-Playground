@@ -4,10 +4,26 @@
 
 <ui:composition>
 
-	<li class="active"><a href="#">Dashboard</a></li>
-	<li><a href="#">Age</a></li>
-	<li><a href="#">Gender</a></li>
-	<li><a href="#">Geo</a></li>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+
+        <ui:include src="user.xhtml"/>
+
+        <div class="w3-container">
+            <h5>Dashboard</h5>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"/><![CDATA[&nbsp;]]> Overview</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"/><![CDATA[&nbsp;]]> Views</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"/><![CDATA[&nbsp;]]> Traffic</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"/><![CDATA[&nbsp;]]> Geo</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"/><![CDATA[&nbsp;]]> Orders</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"/><![CDATA[&nbsp;]]> News</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"/><![CDATA[&nbsp;]]> General</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"/><![CDATA[&nbsp;]]> History</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"/><![CDATA[&nbsp;]]> Settings</a><br/><br/>
+        </div>
+    </nav>
 
 </ui:composition>
 </html>
